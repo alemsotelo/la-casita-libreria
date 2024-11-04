@@ -1,0 +1,422 @@
+html {
+    scroll-behavior: smooth; /* Activar desplazamiento suave */
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9; 
+}
+
+
+/* Encabezado con navegación principal */
+header {
+    width: 100%;
+    height: 8.5rem;
+    background-color: #DB7093; /* Cambiar a tu color pastel rosado */
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Cambiado para alinear todo al centro */
+}
+
+/* Contenedor del logo y navegación */
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0 1.5rem; /* Ajustar el padding para acercar todo un poco más */
+}
+
+/* Estilo para el logo */
+.logo {
+    margin-left: 2rem; /* Espacio a la izquierda del logo */
+    height: auto;
+    width: 100px; /* Ajustar el tamaño del logo */
+}
+
+/* Navegación */
+nav ul {
+    display: flex;
+    gap: 1.5rem; /* Espacio entre los botones de navegación */
+    list-style: none; /* Eliminar puntos de lista */
+    margin: 0; /* Asegurarse de que no haya margen */
+    padding: 0; /* Asegurarse de que no haya padding */
+}
+
+/* Estilo de los enlaces del menú */
+nav a {
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif; /* Asegúrate de usar la fuente correcta */
+    font-size: 1rem;
+    color: #ffffff; /* Color de los enlaces */
+    transition: color 0.3s ease-in-out; /* Suavizar el cambio de color */
+    display: block; /* Asegurarse de que el enlace ocupa el espacio completo */
+}
+
+nav a:hover {
+    color: #FFD700; /* Color amarillo/naranja pastel al pasar el mouse */
+}
+
+/* Estilos para los iconos */
+.nav-icons {
+    display: flex;
+    align-items: center;
+    gap: 1rem; /* Espacio entre los iconos */
+    margin-left: 2rem; /* Ajustar margen izquierdo de los iconos */
+}
+
+/* Iconos de los botones */
+.boton-icon {
+    border: none; /* Sin borde */
+    background: transparent; /* Fondo transparente */
+    cursor: pointer;
+    transition: filter 0.3s ease-in-out; /* Suavizar el cambio de color */
+}
+
+.boton-icon:hover .icono {
+    filter: brightness(0.8); /* Cambiar a un color pastel más claro */
+}
+
+/* Ajustes adicionales de iconos */
+.icono {
+    width: 30px; /* Ajustar el tamaño de los iconos */
+    height: auto;
+}
+
+
+
+#bienvenida {
+    display: flex; /* Usar flexbox para la disposición */
+    justify-content: center; /* Centrar contenido horizontalmente */
+    align-items: center; /* Centrar contenido verticalmente */
+    padding: 40px; /* Espaciado interno */
+    background-color: #f9f9f9; /* Fondo general */
+    border: 2px solid #DB7093; /* Borde similar al de las tarjetas */
+    border-radius: 10px; /* Bordes redondeados */
+    margin: 20px; /* Margen externo */
+    max-width: 900px; /* Ajustar el tamaño máximo del contenedor */
+    margin: 20px auto; /* Centrar el contenedor en la página */
+}
+
+.welcome-content {
+    display: flex; /* Usar flexbox para disposición de texto e imagen */
+    width: 100%; /* Asegurarse de que ocupe todo el ancho */
+}
+
+.welcome-text {
+    flex: 2; /* Ocupa dos columnas */
+    padding: 20px; /* Espacio interno */
+}
+
+.welcome-image {
+    flex: 1; /* Ocupa una columna */
+}
+
+.welcome-image img {
+    width: 80%; /* Ajustar la imagen al 80% del tamaño del contenedor */
+    height: auto; /* Mantiene la proporción */
+    border-radius: 10px; /* Bordes redondeados para la imagen */
+    margin-left: auto; /* Centra la imagen dentro de su contenedor */
+    margin-right: auto; /* Centra la imagen dentro de su contenedor */
+}
+
+
+/* Estilo para las secciones de la página */
+.section-title {
+    color: #ff7f7f; /* Color de los títulos de sección */
+    text-align: center; /* Centrar título */
+    margin-top: 40px;
+}
+#audiolibros {
+    padding: 40px 20px; /* Espaciado de la sección */
+    /* Elimina el fondo blanco para que respete el fondo general */
+    background: none; /* Mantener el fondo general */
+}
+
+.audiobooks-container {
+    display: flex; /* Usar Flexbox para alinear tarjetas */
+    flex-wrap: wrap; /* Permitir que las tarjetas se envuelvan */
+    justify-content: center; /* Centrar las tarjetas en la fila */
+    gap: 20px; /* Espaciado entre las tarjetas */
+}
+
+.card {
+    flex: 1 1 calc(50% - 20px); /* Dos tarjetas por fila con margen */
+    max-width: 560px; /* Limitar el ancho máximo de la tarjeta */
+    background: rgba(255, 255, 255, 0.9); /* Fondo blanco con un poco de transparencia */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Sombra para dar profundidad */
+    overflow: hidden; /* Ocultar contenido que sobresalga */
+}
+
+.card iframe {
+    width: 100%; /* Ancho del iframe para que ocupe el 100% del contenedor */
+    height: 315px; /* Altura fija para mantener la proporción */
+}
+
+/* Contenedor de las tarjetas generales */
+.card-general-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Cambiado a 3 columnas */
+    gap: 20px; /* Aumentar el espacio entre tarjetas */
+    padding: 20px;
+    justify-items: center;
+}
+
+/* Card de cada libro (ofertas y productos) */
+.card-general {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+    background-color: #fff;
+    border: 2px solid #DB7093;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s;
+    max-width: 280px;
+    width: 100%;
+}
+
+/* Contenedor de la imagen */
+.card-general-img {
+    position: relative;
+    width: 100%;
+    height: 280px;
+    overflow: hidden;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+}
+
+/* Estilo de las imágenes primaria y secundaria */
+.card-general-img img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: opacity 0.3s ease-in-out;
+}
+
+/* Imagen primaria visible por defecto */
+.card-general-primary {
+    opacity: 1;
+}
+
+/* Imagen secundaria oculta por defecto */
+.card-general-secondary {
+    opacity: 0;
+}
+
+/* Cambio de imagen al pasar el mouse */
+.card-general-img:hover .card-general-primary {
+    opacity: 0;
+}
+
+.card-general-img:hover .card-general-secondary {
+    opacity: 1;
+}
+
+/* Información de la tarjeta */
+.card-general-info {
+    text-align: center;
+    padding-top: 1rem;
+}
+
+.card-general-title {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #FF69B4;
+    margin-bottom: 0.5rem;
+}
+
+/* Estilos para precios */
+.card-general-prices {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+}
+
+.price-original {
+    text-decoration: line-through;
+    color: #b0b0b0;
+    margin-right: 0.5rem;
+}
+
+.price-offer {
+    color: #FF69B4;
+    font-weight: 700;
+}
+
+/* Botón de carrito */
+.card-general-btn {
+    padding: 0.5rem 1rem;
+    font-weight: bold;
+    color: #fff;
+    background-color: #DB7093;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.card-general-btn:hover {
+    background-color: #C67199;
+}
+
+.ver-mas-container {
+    display: flex;              /* Usa Flexbox para centrar el contenido */
+    justify-content: center;    /* Centra el contenido horizontalmente */
+    margin-top: 20px;          /* Espaciado por encima del botón */
+}
+
+.card-general-btn {
+    padding: 0.5rem 1rem;      /* Espaciado interno del botón */
+    font-weight: bold;          /* Negrita para el texto del botón */
+    color: #fff;                /* Color del texto */
+    background-color: #DB7093; /* Color de fondo del botón */
+    border: none;               /* Sin borde */
+    border-radius: 5px;        /* Bordes redondeados */
+    cursor: pointer;            /* Cambia el cursor al pasar por encima */
+    transition: background-color 0.3s; /* Efecto de transición para el hover */
+}
+
+.card-general-btn:hover {
+    background-color: #C67199;  /* Cambia el color en hover */
+}
+
+
+/* Sección de contacto */
+#contacto {
+    display: flex; /* Usar flexbox para disposición de imagen y formulario */
+    justify-content: center; /* Centrar horizontalmente */
+    align-items: center; /* Centrar verticalmente */
+    padding: 40px; /* Espaciado interno */
+    background-color: #f9f9f9; /* Fondo general */
+    border: 2px solid #DB7093; /* Borde similar al de las tarjetas */
+    border-radius: 10px; /* Bordes redondeados */
+    margin: 20px; /* Margen externo */
+}
+
+.contact-image {
+    flex: 1; /* Ocupa un tercio */
+    display: flex;
+    flex-direction: column; /* Disposición vertical */
+    align-items: center; /* Centrar horizontalmente */
+    justify-content: center; /* Centrar verticalmente */
+}
+
+.contact-image h2 {
+    margin-bottom: 10px; /* Espacio entre el título y la imagen */
+}
+
+.contact-image img {
+    width: 80%; /* Ajusta el tamaño de la imagen */
+    height: auto; /* Mantiene la proporción */
+    border-radius: 10px; /* Bordes redondeados para la imagen */
+}
+
+.contact-form {
+    flex: 2; /* Ocupa dos tercios */
+    padding: 20px; /* Espacio interno */
+    display: flex;
+    flex-direction: column; /* Disposición vertical de los elementos */
+}
+
+.contact-form label {
+    margin: 10px 0 5px; /* Margen para etiquetas */
+}
+
+.contact-form input,
+.contact-form textarea {
+    padding: 10px; /* Espaciado interno */
+    border-radius: 5px; /* Bordes redondeados */
+    border: 1px solid #DB7093; /* Borde del input */
+    margin-bottom: 15px; /* Espacio entre inputs */
+}
+
+.contact-form button {
+    padding: 10px; /* Espaciado interno */
+    font-weight: bold; /* Negrita para el texto del botón */
+    color: #fff; /* Color del texto */
+    background-color: #DB7093; /* Color de fondo del botón */
+    border: none; /* Sin borde */
+    border-radius: 5px; /* Bordes redondeados */
+    cursor: pointer; /* Cambia el cursor al pasar por encima */
+    transition: background-color 0.3s; /* Efecto de transición para el hover */
+}
+
+.contact-form button:hover {
+    background-color: #C67199; /* Cambia el color en hover */
+}
+
+/* Pie de página */
+footer {
+    background-color: #DB7093; /* Color rosado pastel como en el encabezado */
+    color: #ffffff; /* Texto blanco para consistencia */
+    text-align: center; /* Centrar el texto */
+    padding: 20px 0; /* Espaciado */
+    font-size: 0.9rem; /* Tamaño de fuente */
+    border-top: 2px solid #C67199; /* Borde superior ligeramente más oscuro */
+    transition: background-color 0.3s ease; /* Transición suave */
+}
+
+footer a {
+    color: #FFD700; /* Color de enlace amarillo/naranja pastel */
+    text-decoration: none; /* Sin subrayado */
+    transition: color 0.3s ease; /* Efecto de transición en los enlaces */
+}
+
+footer a:hover {
+    color: #ffffff; /* Cambia a blanco al pasar el mouse */
+}
+
+/* Botón "Subir" */
+.btn-up {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #DB7093; /* Fondo rosa pastel */
+    border: none;
+    border-radius: 50%;
+    width: 40px; /* Ajusta el tamaño del botón */
+    height: 40px;
+    cursor: pointer;
+    display: none; /* Inicialmente oculto */
+    background-image: url("../img/flechaarriba.png"); /* Ruta de tu imagen */
+    background-size: 50%; /* Ajusta el tamaño de la imagen */
+    background-repeat: no-repeat;
+    background-position: center;
+    line-height: 0;
+    font-size: 0;
+    
+}
+
+/* Mostrar botón al hacer scroll */
+.btn-up.show {
+    display: block;
+}
+
+#ppalproductos {
+    background-color: #f9f2f4; /* Color de fondo suave en rosa pálido */
+    padding: 20px; /* Espaciado interno */
+    text-align: center; /* Centrar el contenido */
+}
+
+.ppalproductos-content {
+    max-width: 800px; /* Ancho máximo del contenedor */
+    margin: 0 auto; /* Centrar el contenedor */
+}
+
+.welcome-text h1 {
+    font-size: 2.5em; /* Tamaño de fuente para el título */
+    color: #DB7093; /* Color rosa pastel para el texto */
+    margin-bottom: 20px; /* Margen inferior */
+}
+
+.welcome-image img {
+    max-width: 100%; /* Hacer que la imagen sea responsiva */
+    height: auto; /* Mantener la relación de aspecto */
+    border-radius: 10px; /* Bordes redondeados para la imagen */
+}
